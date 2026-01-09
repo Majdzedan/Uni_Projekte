@@ -1,0 +1,146 @@
+= Adaptiver KI-Tutor zur personalisierten Vermittlung von Unternehmenswissen
+:doctype: book
+:toc:
+:toclevels: 3
+:source-highlighter: rouge
+
+== Projektkontext
+
+=== Unternehmen
+* *Organisation:* Netresearch DTT GmbH, Leipzig
+* *Abteilung:* Netresearch AI-Tutor
+
+=== Hintergrund und Motivation
+In modernen Unternehmen ist Wissen einer der wichtigsten Ressourcen, jedoch oft schwer zugänglich. Die Informationen sind häufig über verschiedene Kanäle verstreut:
+
+* E-Mails
+* Interne Dokumentationen
+* Confluence
+* Projektpläne
+
+Die Daraus folgenden Herausforderungen sind:
+
+* xref:design_thinking/phase_3/problemdefinitionen.adoc[Problemdefinition]
+
+== Projektziele
+
+=== Hauptziel
+Entwicklung eines adaptiven KI-Tutors mit folgenden Kernfunktionen:
+
+* Automatische Extraktion, Strukturierung und Aufbereitung von Unternehmenswissen
+* Erstellung personalisierter Lernpfade basierend auf:
+** Rolle des Mitarbeitenden
+** Vorhandenes Wissen
+** Individueller Lernfortschritt
+* Bereitstellung einer modernen, benutzerfreundlichen Mobile-/Webanwendung
+* Technische Architektur mit Potenzial zur Produktweiterentwicklung (z.B. als SaaS-Lösung)
+
+== Technische Spezifikationen
+
+=== Technology Stack
+[cols="1,2"]
+|===
+|Bereich |Technologien
+
+|Frontend
+|React/Next.js, TypeScript, TailwindCSS
+
+|Backend
+|Python/FastAPI oder Node.js/Express
+
+|Datenbank
+|PostgreSQL, Redis
+
+|KI-Komponenten
+|LLM-Integration (z.B. OpenAI GPT, lokale Modelle)
+|===
+
+== Erfolgskriterien
+Das Projekt wird als erfolgreich bewertet, wenn:
+
+* Ein funktionaler Prototyp mit vollständigem Lernzyklus implementiert wurde
+* Eine messbare Verbesserung der internen Wissensvermittlung bei Netresearch nachweisbar ist
+* Eine wissenschaftliche Evaluation der adaptiven Lernfunktionalität durchgeführt wurde
+* Potenziale für eine Produktweiterentwicklung identifiziert wurden
+
+== Projektphasen
+
+=== Sprint 1: Design-Thinking-Prozess
+
+* xref:design_thinking/phase_3/problemdefinitionen.adoc[Problemdefinition]
+* link:design_thinking/phase_3/personas/[Personas]
+* link:design_thinking/prototypes/paper/[Figma-Prototyp]
+* link:design_thinking/prototypes/figma_prototype/[Paper-Prototyp]
+
+=== Sprint 2: Minimaler Prototyp
+
+**Ziel:** 
+
+* Ein minimalistisches Frontend zur Eingabe von
+* Vorerst simple Kontextzugabe zum LLM durch selbst gesetzten Kontext in einem Adminpanel
+* Ausgabe der LLM Antwort in Frontend Chatfenster
+
+**Erreichte Ziele:**
+
+* Frontend zur Eingabe einer Frage
+* Adminpanel zur Eingabe des Kontextes
+* Anbindung an ein Beispiel Confluence
+* Anbindung an ein LLM und Ausgabe einer Antwort auf die eingegebene Frage
+
+=== Sprint 3: MVP
+
+**Ziel:** 
+
+* Persistierung der Kontexte in einer Datenbank
+* Ersetzung der Stichworte durch eine Volltextsuche (Optional: Direkter Schritt zur Vektor-DB)
+* Verbesserung der Chatoberfläche
+** Anzeigen der genutzten Quelle
+** Feedback durch Ladebalken
+** Styleoptimierung
+* Anbindnug mindestens einer weiteren Quelle (z.B GitLab)
+
+*Erreichte Ziele:*
+
+* Kontexte: Dauerhafte Speicherung der Chat-Kontexte in der Datenbank implementiert.
+* Suche: Stichwortsuche durch *Volltextsuche* ersetzt.
+* Vektor-DB: Evaluierung und technische Vorbereitung für semantische Suche abgeschlossen.
+* Quellen-Anzeige: *Genutzte Quelle(n)* werden pro Antwort in der Chatoberfläche sichtbar dargestellt.
+* Lade-Feedback: Visueller *Ladeindikator* zur Verbesserung der User Experience integriert.
+* Style: *Design und Styling* der Chatoberfläche optimiert.
+* Neue Quelle: *GitLab* erfolgreich als zusätzliche externe Datenquelle angebunden.
+
+=== Sprint 4
+
+*Ziel:*
+- Sicherer Benutzerzugang & Session-Management (SSO, Session speichern)
+- Chat-Persistierung & Verlauf-Anzeige pro Benutzer
+- Verbesserung der RAG-Antwortqualität (neues Embedding, semantisches Chunking, bessere Metriken)
+- Erhöhung der Plattform-Stabilität & -Sicherheit (Rate Limiting, CORS, Tests)
+- Lernpfade MVP (Frontend-UI)
+
+*Erreichte Ziele:*
+- SSO-Anmeldung und Session-Management umgesetzt
+- Chat-Verlauf wird pro User gespeichert und angezeigt
+- RAG-Antwortqualität durch Embedding/Chunking/Metriken verbessert
+- Plattform-Stabilität & Sicherheit erhöht (kit-app#107, #100)
+- Lernpfade MVP: Frontend-UI teilweise fertig (kit-app#115)
+
+=== Sprint 5
+
+*Ziel:*
+- Lernpfad zuweisen: Nutzer sollen Lernpfade als persönliche Favoriten markieren können
+- Lernpfad-Kategorien: Kategorien beim Erstellen auswählen oder neu anlegen
+- Kategoriesuche: Lernpfade nach Kategorien filtern und durchsuchen
+- Lernpfad bearbeiten: Titel, Beschreibung, Kategorien und Kapitel editieren
+- Neuen Lernpfad erstellen: Vollständiger Erstellungs-Workflow mit Formular
+- Lernpfad-Suche: Volltextsuche über alle verfügbaren Lernpfade
+- Lernpfad bewerten: Nutzer sollen Lernpfade bewerten können
+- Fortschrittstracking: Lernfortschritt der Nutzer in Lernpfaden verfolgen
+
+*Erreichte Ziele:*
+- Lernpfad zuweisen: Nutzer können Lernpfade als Favoriten markieren/entfernen
+- Lernpfad-Kategorien: Kategorien beim Erstellen auswählen oder neu anlegen
+- Kategoriesuche: Lernpfade nach Kategorien filtern
+- Lernpfad bearbeiten: Titel, Beschreibung, Kategorien und Kapitel editieren
+- Neuen Lernpfad erstellen: Kompletter Erstellungs-Workflow
+- Lernpfad-Suche: Volltextsuche über alle Lernpfade

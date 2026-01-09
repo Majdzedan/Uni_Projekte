@@ -1,0 +1,37 @@
+= Meine Leistungen im Projekt "Adaptiver KI-Tutor"
+:doctype: article
+
+== Projektrahmen
+
+Dieses Projekt ist ein Modul der Universität, bei dem wir in Zusammenarbeit mit einem Projektsponsor – der Netresearch DTT GmbH – eine Softwarelösung entwickeln. Ziel ist es, praxisnahe Erfahrungen in der Softwareentwicklung zu sammeln und ein reales Produkt für ein Unternehmen zu erstellen.
+
+*Aktueller Stand der Anwendung:* https://sp27.imn.htwk-leipzig.de/[Live-Demo (in Entwicklung)]
+
+== Technische Beiträge
+
+=== Frontend-Entwicklung
+
+* *Chat-Titel-Generierung:* Implementierung einer automatischen Titelgenerierung für Chat-Konversationen
+* *n8n-Integration:* Verknüpfung des Frontends mit n8n für Workflow-Automatisierung
+* *Lernpfad-Bereich:* Einführung der Kategorie-Sortierung für eine bessere Übersichtlichkeit der Lernpfade
+
+=== Backend-Entwicklung
+
+* Implementierung verschiedener API-Endpunkte zur Unterstützung der Frontend-Funktionalitäten
+* Anbindung und Integration externer Services
+
+== Persönliche Entwicklung
+
+=== Teamarbeit & Softskills
+
+* *Teamarbeit:* Wertvolle Erfahrungen in der kollaborativen Softwareentwicklung gesammelt – gemeinsames Planen, Abstimmen und Umsetzen von Features im Team
+* *Kommunikation:* Verbesserung der Kommunikationsfähigkeiten durch regelmäßige Abstimmungen und Code-Reviews
+* *Projektmanagement:* Einblicke in agile Arbeitsweisen und Sprint-basierte Entwicklung
+
+=== Berufserfahrung
+
+Durch die Zusammenarbeit mit einem echten Unternehmen als Projektsponsor konnte ich praxisnahe Berufserfahrung sammeln. Dies umfasst:
+
+* Arbeit mit professionellen Entwicklungsstandards
+* Umgang mit realen Anforderungen und Stakeholdern
+* Einblicke in den Unternehmensalltag eines IT-Dienstleisters
