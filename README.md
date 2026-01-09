@@ -41,7 +41,11 @@ Um ein neues Projekt hinzuzufügen:
 4. Fügen Sie bei Bedarf einen `images/` oder `code/` Ordner hinzu
 5. Aktualisieren Sie die Projektliste oben in dieser README
 
-📖 **Detaillierte Anleitung:** Siehe [ANLEITUNG.md](./ANLEITUNG.md) für eine ausführliche Schritt-für-Schritt-Anleitung zum Dokumentieren Ihrer Projekte.
+**Hilfreiche Ressourcen:**
+- 🚀 **Schnelleinstieg:** [QUICK_START.md](./QUICK_START.md) - Schnelle Befehle und Checkliste
+- 📖 **Detaillierte Anleitung:** [ANLEITUNG.md](./ANLEITUNG.md) - Ausführliche Schritt-für-Schritt-Anleitung
+- 📝 **Template:** [TEMPLATE.md](./TEMPLATE.md) - Vorlage für Projekt-README
+- 💡 **Beispiel:** [beispiel-projekt/](./beispiel-projekt/) - Vollständiges Beispielprojekt
 
 ## Kontakt
 
