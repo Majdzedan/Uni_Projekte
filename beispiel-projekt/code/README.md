@@ -17,7 +17,7 @@ Organisieren Sie Ihren Code nach Funktionalität:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Ihre Analysecode hier
+# Ihr Analysecode hier
 ```
 
 ## Hinweise
