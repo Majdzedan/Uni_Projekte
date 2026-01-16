@@ -1,0 +1,36 @@
+# Projekt: Leiterplattenentwicklung – Binäruhr (ATmega48)
+
+**Kurzbeschreibung**  
+Entwurf und Aufbau einer zweilagigen Leiterplatte für eine Binäruhr: vom Schaltplan über PCB-Layout bis zur fertigen, getesteten Platine.
+
+**Meine Rolle / mein Beitrag**
+- Schaltplan erstellt und Bauteile korrekt verschaltet
+- PCB-Layout geroutet (Top/Bottom) inkl. Masseflächen
+- Design-Regeln geprüft (SRC/DRC), Fehler behoben
+- Fertigung vorbereitet (CNC-Fräse: Fräser/Bohrer gewählt), Platine bestückt und gelötet
+- Inbetriebnahme, Debugging und Tests dokumentiert
+
+**Tech Stack**
+- KiCad (Schematic + PCB)
+- ATmega48, Quarz, LEDs, Taster
+- CNC-Fräse (G-Code / CAM-Workflow)
+- Multimeter für Kontaktprüfung und Fehlersuche
+
+**Was ich umgesetzt habe (konkret)**
+- Einhaltung von Layout-Anforderungen (Leiterbahnbreite/Abstände, Via-Größen, Beschriftung)
+- Masseführung über Masseflächen statt einzelner Leitungen
+- Systematisches Debugging nach dem Löten: Kontaktprüfung, Spannungen prüfen, Fehler schrittweise eingrenzen
+- Sauberes Laborprotokoll: Fotos, Schaltplan, Layout, DRC/SRC, Inbetriebnahmeprotokoll
+
+**Ergebnis**
+- Funktionsfähige bestückte Platine und dokumentierte Tests
+- Wiederholbarer Ablauf von “Design → Fertigung → Bestückung → Test”
+
+**Was ich gelernt habe**
+- PCB-Design ist nicht nur “schön routen”: Fertigungsregeln und Bauteilplatzierung sind entscheidend
+- DRC/SRC früh nutzen spart Zeit (Fehler schneller finden)
+- Masseflächen verbessern Stabilität, aber brauchen saubere Isolation/Abstände
+- Debugging-Haltung: erst messen/prüfen (Kontakt, Kurzschluss, Versorgung), dann gezielt ändern
+- Dokumentation ist Teil der Leistung (nicht nur Code/Hardware)
+
+

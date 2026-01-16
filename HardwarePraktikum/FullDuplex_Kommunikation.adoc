@@ -1,0 +1,30 @@
+== Projekt: Kommunikation über elektrische Schnittstellen – Synchronous Full-Duplex mit ARQ
+
+=== Kurzbeschreibung
+Implementierung einer synchronen Full-Duplex Datenübertragung über ein Patchkabel zwischen zwei Systemen (z. B. Linux-PC mit B15-Board und Arduino). Enthält Taktleitung, Rahmung/Synchronisation, Fehlererkennung und ARQ (Wiederholanforderung) sowie Tests mit Logic Analyzer.
+
+=== Meine Rolle / mein Beitrag
+* Übertragungsprotokoll definiert: Bitbelegung, Takt, Framing, Synchronisation
+* Sender/Empfänger implementiert (gleichzeitig senden und empfangen)
+* Fehlerfälle getestet (Störungen) und Wiederholung fehlerhafter Blöcke umgesetzt
+
+=== Tech Stack
+* Linux (z. B. C/C++/Rust — je nach deiner Umsetzung)
+* STDIN/STDOUT + Linux Pipes (z. B. `echo ... | binary`)
+* B15-Board (PortA Registerzugriff) und Arduino Nano
+* Logic Analyzer für Nachweis des Signalablaufs
+
+=== Was ich umgesetzt habe (konkret)
+* *Synchronous Full-Duplex:* Leitungen logisch getrennt (z. B. N Bit senden / N Bit empfangen) plus dedizierte Taktleitung; bei Taktwechsel wird ein Symbol übernommen.
+* *Byte-Übertragung:* Symbole zu Bytes zusammengefasst; zusätzlich ein Bit für Rahmensynchronisation am Beginn eines Zeichens.
+* *Fehlererkennung:* Prüfsumme/Checksum (statt nur Parität); bei Fehler wird der betroffene Block erneut übertragen.
+* *Blockweise Dateiübertragung:* Daten in Blöcken übertragen (auch größere Dateien), Senden und Empfangen parallel.
+
+=== Ergebnis
+* Zuverlässige Übertragung von Textzeilen und Dateien über Kabel mit Fehlerbehandlung
+* Mess- und Testnachweise (Logic-Analyzer-Captures, Logs) und stabile Übertragung auch unter Störungen
+
+=== Was ich gelernt habe
+* Ein „einfaches Kabel“ wird erst mit Takt, Framing und Fehlerbehandlung zu einem robusten Kanal
+* Full-Duplex erhöht die Komplexität (Timing/Parallelität) -> klare Trennung von Senden/Empfangen ist entscheidend
+* Tests mit echten Störungen sind wichtiger als nur ein einmaliger Funktionstest

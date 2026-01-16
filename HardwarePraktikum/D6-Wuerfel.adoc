@@ -1,0 +1,28 @@
+== Projekt: Flipflops & Schieberegister – D6-Würfel (diskrete Logik + GAL)
+
+=== Kurzbeschreibung
+Entwurf und Aufbau eines D6-Würfels, der per Taster die Werte 1–6 durchläuft und auf einem low-active Würfeldisplay ausgibt. Umsetzung einmal mit diskreter Logik (Zähler + Grundgatter) und einmal mit GAL16V8D (Gleichungen in WinCUPL).
+
+=== Meine Rolle / mein Beitrag
+* Zustandslogik und Anzeigecodierung hergeleitet (inkl. Wahrheitstabelle und Vereinfachungen)
+* Schaltung auf Steckbrett aufgebaut und getestet
+* GAL-Variante in WinCUPL beschrieben, kompiliert und auf den Chip programmiert (Galep-Programmer / Windows-VM)
+
+=== Tech Stack
+* ICs: 4-Bit Zähler (z. B. DL193D), Grundgatter-ICs (74xx)
+* Anzeige: Würfeldisplay (low-active A/B/C/D)
+* GAL16V8D + WinCUPL, Galep-Programmiergerät
+
+=== Was ich umgesetzt habe (konkret)
+* *Diskrete Logik:* D6-Würfel zählt nur bei gedrücktem Taster, sonst hält er den Zustand. Reset- und Anzeigelogik mit Grundgattern.
+* *GAL-Variante:* Automaten-Gleichungen für einen D6-Würfel erstellt (z. B. rückwärts zählen). Optionaler Schalter für erhöhte Wahrscheinlichkeit bestimmter Zustände (z. B. mehr „6“).
+
+=== Ergebnis
+* Funktionsfähige Schaltung(en) mit korrekter Anzeige 1–6
+* Dokumentierte Herleitung (Wahrheitstabelle, vereinfachte Gleichungen) und reproduzierbarer Aufbau
+
+=== Was ich gelernt habe
+* Low-active Anzeigen brauchen saubere Invertierungslogik und verlässliche Tests am Ausgang
+* Diskrete Logik zwingt zu sauberer Herleitung: Wahrheitstabelle -> Vereinfachung -> Schaltung
+* Mit GAL ist Iteration schneller: Logik ändern, kompilieren, flashen (ohne Neuverdrahten)
+
